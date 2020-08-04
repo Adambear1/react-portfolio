@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { Model, Sequelize, DataTypes } = require("sequelize");
 const sequelize = require("../config/index");
 

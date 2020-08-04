@@ -1,5 +1,5 @@
 const Post = require("./Portfolio");
-
+require("dotenv").config();
 Portfolio.bulkCreate([
   {
     name: "Custom MP3 Player",
