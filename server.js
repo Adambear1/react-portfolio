@@ -1,24 +1,42 @@
 require("dotenv").config();
 const express = require("express");
-const helmet = require("helmet");
-const bodyParser = require("body-parser");
-const cors = require("cors");
 const logger = require("morgan");
+const helmet = require("helmet");
+const cors = require("cors");
+const compression = require("compression");
 
+const PORT = process.env.PORT || 5000;
 const app = express();
-const PORT = process.env.PORT || 3001;
 
-// MW
-app.use(cors());
 app.use(helmet());
 app.use(logger("dev"));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
-// API Routes
-app.use("api/projects", require("./routes/api"));
+app.use(cors());
+app.use(compression());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Server
+// app.use(require("./routes/api.js"));
+
+require("dotenv").config();
+var MongoClient = require("mongodb").MongoClient;
+var url = process.env.URI;
+
+app.get("/api", (req, res) => {
+  MongoClient.connect(url, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db("Portfolio");
+    dbo
+      .collection("Portfolio")
+      .find({})
+      .toArray(function (err, result) {
+        if (err) throw err;
+        res.json(result);
+        db.close();
+      });
+  });
+});
+
 app.listen(PORT, () => {
-  console.log("Server is on PORT " + PORT);
+  console.log(`App running on port ${PORT}!`);
 });
