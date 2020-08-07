@@ -9,15 +9,13 @@ import api from "../utils/api";
 function Portfolio() {
   const [portfolio, setPortfolio] = useState([]);
   useEffect(() => {
-    loadPortfolio();
+    api.getPortfolio().then((data) => setPortfolio(data.data));
   }, []);
-  function loadPortfolio() {
-    api.loadPortfolio().then((data) => setPortfolio(data));
-  }
+  console.log(portfolio);
   return (
     <>
       <Navbar />
-      <Header padding={70} title="Portfolio" />
+      <Header padding={70} title="Portfolio" id="portfolio" />
       <CardContainer>
         <div
           className="uk-child-width-1-2@m uk-grid-match"
@@ -25,15 +23,16 @@ function Portfolio() {
           id="portfolio-section"
           uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 250; repeat: false"
         >
-          {portfolio.map((item) => {
+          {portfolio.map((item, learningExp) => {
             return (
               <PortfolioCard
-                title={item.title}
-                about={item.about}
-                repoURL={item.repoURL}
-                siteURL={item.siteURL}
-                imgURL={item.imgURL}
-                // key={index}
+                title={item.name}
+                about={item.description}
+                repoURL={item.githubCode}
+                siteURL={item.githubRepo}
+                learningExp={learningExp}
+                imgURL={item.gif}
+                key={item._id}
               />
             );
           })}

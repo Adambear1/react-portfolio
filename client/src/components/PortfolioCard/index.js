@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 
 function PortfolioCard(props) {
@@ -20,6 +20,9 @@ function PortfolioCard(props) {
               </li>
               <li>
                 <img src={props.imgURL} alt="" uk-cover="true" />
+                {/* <ul>
+                  <li>{props.learningExp}</li>
+                </ul> */}
               </li>
             </ul>
             <a
