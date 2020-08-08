@@ -18,14 +18,11 @@ function PortfolioCard(props) {
                 <h3 className="uk-card-title project-title">{props.title}</h3>
                 <p className="project-description">{props.about}</p>
               </li>
-              <li>
-                {/* <img src={props.imgURL} alt="" uk-cover="true" /> */}
-                <img
-                  className="card-img-top"
-                  src={props.imgURL}
-                  alt="Card image cap"
-                />
-              </li>
+
+              <img src={props.imgURL} alt="" uk-cover="true" />
+              {props.lEx.map((item) => {
+                return <li title={item.learningExp}>{item.learningExp}</li>;
+              })}
             </ul>
             <a
               className="uk-position-top-right uk-position-small uk-hidden-hover"

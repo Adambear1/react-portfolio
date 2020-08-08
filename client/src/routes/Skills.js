@@ -5,19 +5,22 @@ import SkillsCard from "../components/SkillsCard";
 import api from "../utils/api";
 
 function Skills() {
-  const [skills, setSkills] = useState([]);
   const [template, setTemplate] = useState([]);
   const [styling, setStyling] = useState([]);
   const [javascript, setJavascript] = useState([]);
   const [database, setDatabase] = useState([]);
   const [library, setLibrary] = useState([]);
   const [resources, setResources] = useState([]);
+  const [python, setPython] = useState([]);
+  const [other, setOther] = useState([]);
   let tempArr = [];
   let styleArr = [];
   let jsArr = [];
   let dbArr = [];
   let libArr = [];
   let resArr = [];
+  let pyArr = [];
+  let otherArr = [];
   useEffect(() => {
     api.getSkills().then((data) => {
       const _data = data.data;
@@ -37,8 +40,14 @@ function Skills() {
         if (name.type === "library") {
           libArr.push(name);
         }
-        if (name.type === "resources") {
+        if (name.type === "resource") {
           resArr.push(name);
+        }
+        if (name.type === "python") {
+          pyArr.push(name);
+        }
+        if (name.type === "other") {
+          otherArr.push(name);
         }
       }
       setTemplate(tempArr);
@@ -47,6 +56,8 @@ function Skills() {
       setDatabase(dbArr);
       setLibrary(libArr);
       setResources(resArr);
+      setPython(pyArr);
+      setOther(otherArr);
     });
   }, []);
 
@@ -61,58 +72,21 @@ function Skills() {
           uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 175; repeat: false"
         >
           <SkillsCard
-            title="Templating Engines"
-            // key={item._id}
+            title="Template Engines"
             skills={template}
-            // name={item.name}
-            // url={item.url}
             animate="slide-up"
           />
-
-          {styling.map((item) => {
-            return (
-              <SkillsCard
-                title="Styling"
-                key={item._id}
-                name={item.name}
-                url={item.url}
-                animate="slide-up"
-              />
-            );
-          })}
-          {javascript.map((item) => {
-            return (
-              <SkillsCard
-                title="Javascript"
-                key={item._id}
-                name={item.name}
-                url={item.url}
-                animate="slide-up"
-              />
-            );
-          })}
-          {library.map((item) => {
-            return (
-              <SkillsCard
-                title="Javascript"
-                key={item._id}
-                name={item.name}
-                url={item.url}
-                animate="slide-up"
-              />
-            );
-          })}
-          {resources.map((item) => {
-            return (
-              <SkillsCard
-                title="Javascript"
-                key={item._id}
-                name={item.name}
-                url={item.url}
-                animate="slide-up"
-              />
-            );
-          })}
+          <SkillsCard title="Styling" skills={styling} animate="slide-up" />
+          <SkillsCard
+            title="JavaScript"
+            skills={javascript}
+            animate="slide-up"
+          />
+          <SkillsCard title="Databases" skills={database} animate="slide-up" />
+          <SkillsCard title="Libraries" skills={library} animate="slide-up" />
+          <SkillsCard title="Resources" skills={resources} animate="slide-up" />
+          <SkillsCard title="Python" skills={python} animate="slide-up" />
+          <SkillsCard title="Other" skills={other} animate="slide-up" />
         </div>
       </CardContainer>
     </>

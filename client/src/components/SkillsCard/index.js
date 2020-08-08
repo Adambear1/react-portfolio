@@ -10,21 +10,18 @@ function SkillsCard(props) {
         <div className="uk-card-body">
           <h3 className="uk-card-title">{props.title}</h3>
           <ul className="uk-list uk-list-divider">
-            {props.skills.map((skills) => {
-              return <li>{skills}</li>;
+            {props.skills.map((item) => {
+              return (
+                <li title={item.name}>
+                  <a href={item.url}>{item.name}</a>
+                </li>
+              );
             })}
           </ul>
         </div>
         <div
           className={`uk-card-footer portfolio-card-footer ${props.name}-card-footer`}
-        >
-          <div>
-            <span
-              className="skills-icon"
-              uk-icon={`icon: ${props.icon}; ratio: 1.5`}
-            ></span>
-          </div>
-        </div>
+        ></div>
       </div>
     </div>
   );

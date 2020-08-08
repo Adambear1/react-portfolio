@@ -22,14 +22,15 @@ function Portfolio() {
           id="portfolio-section"
           uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 175; repeat: false"
         >
-          {portfolio.map((item, learningExp) => {
+          {portfolio.map((item) => {
+            console.log(item.learningExp);
             return (
               <PortfolioCard
                 title={item.name}
                 about={item.description}
                 repoURL={item.githubCode}
                 siteURL={item.githubRepo}
-                learningExp={learningExp}
+                lEx={item.learningExp}
                 imgURL={item.gif}
                 key={item._id}
               />
