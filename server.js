@@ -22,12 +22,26 @@ require("dotenv").config();
 var MongoClient = require("mongodb").MongoClient;
 var url = process.env.URI;
 
-app.get("/api", (req, res) => {
+app.get("/api/portfolio", (req, res) => {
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     var dbo = db.db("Portfolio");
     dbo
       .collection("Portfolio")
+      .find({})
+      .toArray(function (err, result) {
+        if (err) throw err;
+        res.json(result);
+        db.close();
+      });
+  });
+});
+app.get("/api/skills", (req, res) => {
+  MongoClient.connect(url, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db("Portfolio");
+    dbo
+      .collection("Skills")
       .find({})
       .toArray(function (err, result) {
         if (err) throw err;

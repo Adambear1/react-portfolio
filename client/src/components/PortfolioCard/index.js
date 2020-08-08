@@ -19,10 +19,12 @@ function PortfolioCard(props) {
                 <p className="project-description">{props.about}</p>
               </li>
               <li>
-                <img src={props.imgURL} alt="" uk-cover="true" />
-                {/* <ul>
-                  <li>{props.learningExp}</li>
-                </ul> */}
+                {/* <img src={props.imgURL} alt="" uk-cover="true" /> */}
+                <img
+                  className="card-img-top"
+                  src={props.imgURL}
+                  alt="Card image cap"
+                />
               </li>
             </ul>
             <a

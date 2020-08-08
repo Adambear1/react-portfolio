@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 
 function SkillsCard(props) {
@@ -10,9 +10,9 @@ function SkillsCard(props) {
         <div className="uk-card-body">
           <h3 className="uk-card-title">{props.title}</h3>
           <ul className="uk-list uk-list-divider">
-            {props.skills.map((skill) => (
-              <li>{skill}</li>
-            ))}
+            {props.skills.map((skills) => {
+              return <li>{skills}</li>;
+            })}
           </ul>
         </div>
         <div
