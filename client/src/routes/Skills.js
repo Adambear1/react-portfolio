@@ -66,26 +66,28 @@ function Skills() {
       <Header padding={70} title="Skills" id="skills" />
       <CardContainer>
         <div
-          className="uk-child-width-1-2@m uk-grid-match"
+          className="uk-child-width-1-4@m uk-grid-match"
           uk-grid="true"
           id="portfolio-section"
-          uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 175; repeat: false"
+          uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 100; repeat: false"
         >
           <SkillsCard
             title="Template Engines"
             skills={template}
             animate="slide-up"
           />
-          <SkillsCard title="Styling" skills={styling} animate="slide-up" />
+          <SkillsCard title="Python" skills={python} animate="slide-up" />
+
           <SkillsCard
             title="JavaScript"
             skills={javascript}
             animate="slide-up"
           />
           <SkillsCard title="Databases" skills={database} animate="slide-up" />
+          <SkillsCard title="Styling" skills={styling} animate="slide-up" />
           <SkillsCard title="Libraries" skills={library} animate="slide-up" />
           <SkillsCard title="Resources" skills={resources} animate="slide-up" />
-          <SkillsCard title="Python" skills={python} animate="slide-up" />
+
           <SkillsCard title="Other" skills={other} animate="slide-up" />
         </div>
       </CardContainer>

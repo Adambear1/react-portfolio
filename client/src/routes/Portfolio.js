@@ -7,23 +7,96 @@ import api from "../utils/api";
 // import imageURL from "../assets/images/background/green-leaves-flip.jpeg";
 
 function Portfolio() {
-  const [portfolio, setPortfolio] = useState([]);
+  const [front, setFront] = useState([]);
+  const [back, setBack] = useState([]);
+  const [full, setFull] = useState([]);
+  const [professional, setProfessional] = useState([]);
+  let frontArr = [];
+  let backArr = [];
+  let fullArr = [];
+  let proArr = [];
   useEffect(() => {
-    api.getPortfolio().then((data) => setPortfolio(data.data));
+    api.getPortfolio().then((data) => {
+      const _data = data.data;
+      for (const name of _data) {
+        if (name.type === "front") {
+          frontArr.push(name);
+        }
+        if (name.type === "back") {
+          backArr.push(name);
+        }
+        if (name.type === "full") {
+          fullArr.push(name);
+        }
+        if (name.type === "professional") {
+          proArr.push(name);
+        }
+      }
+      setFront(frontArr);
+      setBack(backArr);
+      setFull(fullArr);
+      setProfessional(proArr);
+    });
   }, []);
   // console.log(portfolio);
   return (
     <>
       <Header padding={70} title="Portfolio" id="portfolio" />
       <CardContainer>
+        <h1>Front End Applications</h1>
         <div
-          className="uk-child-width-1-2@m uk-grid-match"
+          className="uk-child-width-1-3@m uk-grid-match"
           uk-grid="true"
           id="portfolio-section"
-          uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 175; repeat: false"
+          uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 100; repeat: false"
         >
-          {portfolio.map((item) => {
-            console.log(item.learningExp);
+          {front.map((item) => {
+            return (
+              <PortfolioCard
+                title={item.name}
+                about={item.description}
+                repoURL={item.githubCode}
+                siteURL={item.githubRepo}
+                lEx={item.learningExp}
+                imgURL={item.gif}
+                key={item._id}
+              />
+            );
+          })}
+        </div>
+      </CardContainer>
+      <CardContainer>
+        <h1>Back End Applications</h1>
+        <div
+          className="uk-child-width-1-3@m uk-grid-match"
+          uk-grid="true"
+          id="portfolio-section"
+          uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 100; repeat: false"
+        >
+          {back.map((item) => {
+            return (
+              <PortfolioCard
+                title={item.name}
+                about={item.description}
+                repoURL={item.githubCode}
+                siteURL={item.githubRepo}
+                lEx={item.learningExp}
+                imgURL={item.gif}
+                key={item._id}
+              />
+            );
+          })}
+        </div>
+      </CardContainer>
+      <CardContainer>
+        <h1>Full Stack Applications</h1>
+        <div
+          className="uk-child-width-1-3@m uk-grid-match"
+          uk-grid="true"
+          id="portfolio-section"
+          uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 100; repeat: false"
+        >
+          {full.map((item) => {
             return (
               <PortfolioCard
                 title={item.name}
