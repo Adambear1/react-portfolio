@@ -7,21 +7,21 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="uk-text-center uk-text-middle footer">
-        <span> © Joanna Preston</span> <br />
+        <span> © Adam Birgenheier</span> <br />
         <a
           uk-icon="icon: github"
-          href="https://github.com/jpreston-alt"
+          href="https://github.com/adambear1"
           className="contact-icon contact-link-icon"
           target="_blank"
         ></a>
         <a
           uk-icon="icon: mail"
           className="contact-icon contact-link-icon"
-          href="mailto:joannappreston@gmail.com"
+          href="mailto:adamcarlbirgenheier@gmail.com"
         ></a>
         <a
           uk-icon="icon: linkedin"
-          href="https://www.linkedin.com/in/joanna-preston/"
+          href="https://www.linkedin.com/in/airgenheier/"
           target="_blank"
           className="contact-icon contact-link-icon"
         ></a>

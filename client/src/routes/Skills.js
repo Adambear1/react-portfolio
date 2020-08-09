@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import CardContainer from "../components/CardContainer";
 import SkillsCard from "../components/SkillsCard";
 import api from "../utils/api";
+import Navbar from "../components/Navbar";
 
 function Skills() {
   const [template, setTemplate] = useState([]);
@@ -21,48 +22,54 @@ function Skills() {
   let resArr = [];
   let pyArr = [];
   let otherArr = [];
-  useEffect(() => {
-    api.getSkills().then((data) => {
-      const _data = data.data;
-      for (const name of _data) {
-        if (name.type === "template") {
-          tempArr.push(name);
+  useEffect(
+    () => {
+      api.getSkills().then((data) => {
+        const _data = data.data;
+        for (const name of _data) {
+          if (name.type === "template") {
+            tempArr.push(name);
+          }
+          if (name.type === "styling") {
+            styleArr.push(name);
+          }
+          if (name.type === "javascript") {
+            jsArr.push(name);
+          }
+          if (name.type === "database") {
+            dbArr.push(name);
+          }
+          if (name.type === "library") {
+            libArr.push(name);
+          }
+          if (name.type === "resource") {
+            resArr.push(name);
+          }
+          if (name.type === "python") {
+            pyArr.push(name);
+          }
+          if (name.type === "other") {
+            otherArr.push(name);
+          }
         }
-        if (name.type === "styling") {
-          styleArr.push(name);
-        }
-        if (name.type === "javascript") {
-          jsArr.push(name);
-        }
-        if (name.type === "database") {
-          dbArr.push(name);
-        }
-        if (name.type === "library") {
-          libArr.push(name);
-        }
-        if (name.type === "resource") {
-          resArr.push(name);
-        }
-        if (name.type === "python") {
-          pyArr.push(name);
-        }
-        if (name.type === "other") {
-          otherArr.push(name);
-        }
-      }
-      setTemplate(tempArr);
-      setStyling(styleArr);
-      setJavascript(jsArr);
-      setDatabase(dbArr);
-      setLibrary(libArr);
-      setResources(resArr);
-      setPython(pyArr);
-      setOther(otherArr);
-    });
-  }, []);
+        //eslint-disable-next-line
+        setTemplate(tempArr);
+        setStyling(styleArr);
+        setJavascript(jsArr);
+        setDatabase(dbArr);
+        setLibrary(libArr);
+        setResources(resArr);
+        setPython(pyArr);
+        setOther(otherArr);
+      });
+    },
+    // eslint-disable-next-line
+    []
+  );
 
   return (
     <>
+      <Navbar />
       <Header padding={70} title="Skills" id="skills" />
       <CardContainer>
         <div

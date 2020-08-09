@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const logger = require("morgan");
 const helmet = require("helmet");
+const axios = require("axios");
 const cors = require("cors");
 const compression = require("compression");
 
@@ -49,6 +50,19 @@ app.get("/api/skills", (req, res) => {
         db.close();
       });
   });
+});
+
+app.get("/api/starred", (req, res) => {
+  axios
+    .get(
+      `https://api.github.com/users/Adambear1/starred?page=1&per_page=5&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}/starred=true&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+      // `https://api.github.com/users/adambear1`
+    )
+    .then((data) => {
+      // console.log(data.data.items);
+      console.log(data.data);
+      res.json(data.data);
+    });
 });
 
 app.listen(PORT, () => {
