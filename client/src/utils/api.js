@@ -2,12 +2,14 @@ import axios from "axios";
 
 export default {
   getPortfolio: function () {
-    return axios.get("http://localhost:5000/api/portfolio");
+    return axios.get("/api/portfolio");
   },
   getStarred: function () {
-    return axios.get("http://localhost:5000/api/starred");
+    return axios.get("/api/starred");
   },
   getSkills: function () {
-    return axios.get("http://localhost:5000/api/skills");
+    return axios.get("/api/skills");
   },
 };
+
+// http://localhost:5000
