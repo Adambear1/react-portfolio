@@ -2,6 +2,9 @@
   padding-top: 70px;
 }
 
+.home-container {
+  height: 78vh !important;
+}
 .subtitle {
   margin: 0px;
   color: #b1b1b1 !important;

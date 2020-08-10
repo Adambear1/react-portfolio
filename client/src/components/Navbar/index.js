@@ -19,6 +19,11 @@ function Navbar(props) {
         <div className="uk-navbar-right">
           <ul className="uk-navbar-nav uk-visible@m">
             <li>
+              <Link to="/" className="nav-item" style={{ color: props.color }}>
+                Home
+              </Link>
+            </li>
+            <li>
               <Link
                 to="/about"
                 className="nav-item"

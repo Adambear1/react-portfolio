@@ -21,7 +21,7 @@ class Footer extends React.Component {
         ></a>
         <a
           uk-icon="icon: linkedin"
-          href="https://www.linkedin.com/in/airgenheier/"
+          href="https://www.linkedin.com/in/abirgenheier/"
           target="_blank"
           className="contact-icon contact-link-icon"
         ></a>
