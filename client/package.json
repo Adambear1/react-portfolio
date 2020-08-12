@@ -2,6 +2,12 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.x",
+    "npm": "*"
+  },
   "proxy": "https://adam-react-portfolio.herokuapp.com/ || https://localhost:3000/",
   "dependencies": {
     "aos": "^2.3.4",

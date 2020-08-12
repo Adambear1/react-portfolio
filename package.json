@@ -1,6 +1,10 @@
 {
   "name": "Portfolio",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.x",
+    "npm": "*"
+  },
   "description": "-",
   "main": "server.js",
   "scripts": {
