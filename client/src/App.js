@@ -12,16 +12,20 @@ import ResumeModal from "./components/ResumeModal";
 
 function App() {
   return (
-    <Router>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route exact path="/portfolio" component={Portfolio} />
-      <Route exact path="/skills" component={Skills} />
-      <MobileMenu />
-      <ContactCanvas />
-      <ResumeModal />
-      <Footer />
-    </Router>
+    <>
+      <Router>
+        <>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/skills" component={Skills} />
+          <MobileMenu />
+          <ContactCanvas />
+          <ResumeModal />
+          <Footer />
+        </>
+      </Router>
+    </>
   );
 }
 
