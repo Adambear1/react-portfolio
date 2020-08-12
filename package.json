@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Website",
   "main": "server.js",
+  "engines": {
+    "node": "*"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "cd node server.js",
