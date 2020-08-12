@@ -1,7 +1,9 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "proxy": "https://adam-react-portfolio.herokuapp.com/ || https://localhost:3000/",
   "dependencies": {
     "aos": "^2.3.4",
@@ -13,9 +15,6 @@
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.1"
-  },
-  "engines": {
-    "node": "12.x"
   },
   "scripts": {
     "start": "react-scripts start",
