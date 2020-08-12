@@ -1,9 +1,7 @@
 {
-  "name": "mern",
-  "version": "0.1.0",
-  "private": true,
   "name": "Portfolio",
   "version": "1.0.0",
+  "private": true,
   "engines": {
     "node": "12.x",
     "npm": "*"
