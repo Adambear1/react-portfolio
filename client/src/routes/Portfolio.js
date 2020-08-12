@@ -6,7 +6,6 @@ import CardContainer from "../components/CardContainer";
 import api from "../utils/api";
 import FavoritesCard from "../components/FavoritesCard";
 import ViewAllButton from "../components/ViewAllButton";
-// import imageURL from "../assets/images/background/green-leaves-flip.jpeg";
 
 function Portfolio() {
   const [front, setFront] = useState([]);
@@ -50,7 +49,7 @@ function Portfolio() {
           <div class="js-wrapper uk-background-muted uk-margin-auto">
             <div uk-overflow-auto="selContainer: .uk-height-medium; selContent: .js-wrapper">
               <div class="uk-grid-large" uk-grid>
-                <h1>Top Rated Applications</h1>
+                <h1>⭐ Top Rated Applications ⭐</h1>
                 <div
                   className="uk-child-width-1-2@m uk-grid-match "
                   uk-grid="true"

@@ -11,5 +11,3 @@ export default {
     return axios.get("/api/skills");
   },
 };
-
-// http://localhost:5000

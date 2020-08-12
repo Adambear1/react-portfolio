@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const logger = require("morgan");
 const helmet = require("helmet");
@@ -6,8 +7,20 @@ const axios = require("axios");
 const cors = require("cors");
 const compression = require("compression");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const app = express();
+
+// Dev
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 app.use(helmet());
 app.use(logger("dev"));
@@ -21,7 +34,7 @@ app.use(express.json());
 
 require("dotenv").config();
 var MongoClient = require("mongodb").MongoClient;
-var url = process.env.URI;
+var url = process.env.MONGODB_URI || process.env.URI;
 
 app.get("/api/portfolio", (req, res) => {
   MongoClient.connect(url, function (err, db) {
@@ -56,7 +69,6 @@ app.get("/api/starred", (req, res) => {
   axios
     .get(
       `https://api.github.com/users/Adambear1/starred?page=1&per_page=5&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}/starred=true&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
-      // `https://api.github.com/users/adambear1`
     )
     .then((data) => {
       // console.log(data.data.items);
