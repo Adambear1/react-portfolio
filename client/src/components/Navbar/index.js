@@ -51,18 +51,18 @@ function Navbar(props) {
               </Link>
             </li>
             <li>
-              <div uk-toggle="target: #resume-modal" className="nav-item">
+              <a uk-toggle="target: #resume-modal" className="nav-item">
                 Resume
-              </div>
+              </a>
             </li>
             <li>
-              <div
+              <a
                 uk-toggle="target: #contact-canvas"
                 className="nav-item"
                 style={{ color: props.color }}
               >
                 Contact
-              </div>
+              </a>
             </li>
           </ul>
           <a
