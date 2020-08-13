@@ -7,7 +7,6 @@ import CardContainer from "../components/CardContainer";
 import api from "../utils/api";
 import FavoritesCard from "../components/FavoritesCard";
 import ViewAllButton from "../components/ViewAllButton";
-import Axios from "axios";
 
 function Portfolio() {
   const [front, setFront] = useState([]);
@@ -20,13 +19,25 @@ function Portfolio() {
   let backArr = [];
   let fullArr = [];
   useEffect(() => {
-    axios
-      .get(
-        "https://api.github.com/users/Adambear1/starred?page=1&per_page=5&client_id=b457e75c9719bdfdfd76/starred=true&client_secret=35f3055f4b29a23732ce2a18a62dc8ce9077a267"
-      )
+    // axios
+    //   .get(
+    //     "https://api.github.com/users/Adambear1/starred?page=1&per_page=5&client_id=b457e75c9719bdfdfd76/starred=true&client_secret=35f3055f4b29a23732ce2a18a62dc8ce9077a267"
+    //   )
+    //   .then((data) => {
+    //     console.log(data.data);
+    //     setFav(data.data);
+    //   });
+    api
+      .getStarred()
       .then((data) => {
-        console.log(data.data);
-        setFav(data.data);
+        try {
+          setFav(data.data);
+        } catch (err) {
+          console.log(err);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
       });
     api.getPortfolio().then((data) => {
       const _data = data.data;
