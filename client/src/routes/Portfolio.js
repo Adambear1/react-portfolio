@@ -175,7 +175,7 @@ function Portfolio() {
                         repoURL={item.githubCode}
                         siteURL={item.githubRepo}
                         lEx={item.learningExp}
-                        imgURL={item.gif}
+                        gif={item.gif}
                       />
                     );
                   })}
