@@ -20,16 +20,7 @@ function FavoritesCard(props) {
         >
           <ul className="uk-slideshow-items">
             <li>
-              <h3 className="uk-card-title project-title">
-                {props.name}
-                <button
-                  href={"#" + props.html_url}
-                  type="button"
-                  class="color"
-                  uk-icon="tv"
-                  uk-toggle
-                />
-              </h3>
+              <h3 className="uk-card-title project-title">{props.name}</h3>
               <p className="project-description">{props.description}</p>
             </li>
             <li></li>
