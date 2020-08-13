@@ -7,7 +7,7 @@ function PortfolioCard(props) {
   return (
     <div className="uk-card uk-card-default portfolio-card">
       <div id={props.repoURL} uk-modal>
-        <div id={props.repoURL} class="uk-modal-dialog uk-modal-body">
+        <div class="uk-modal-dialog uk-modal-body">
           <img src={props.gif} width="" height="" alt="" uk-img />
           <button class="uk-modal-close" type="button"></button>
         </div>
@@ -22,14 +22,14 @@ function PortfolioCard(props) {
             <li>
               <h3 className="uk-card-title project-title">
                 {props.title}
-                <a uk-toggle>
-                  <button
-                    href={"#" + props.repoURL}
-                    type="button"
-                    class="color"
-                    uk-icon="tv"
-                  />
-                </a>
+
+                <button
+                  href={"#" + props.repoURL}
+                  type="button"
+                  class="color"
+                  uk-icon="tv"
+                  uk-toggle
+                />
               </h3>
               <p className="project-description">{props.about}</p>
             </li>
