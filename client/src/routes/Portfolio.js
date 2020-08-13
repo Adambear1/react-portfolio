@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import PortfolioCard from "../components/PortfolioCard";
@@ -6,6 +7,7 @@ import CardContainer from "../components/CardContainer";
 import api from "../utils/api";
 import FavoritesCard from "../components/FavoritesCard";
 import ViewAllButton from "../components/ViewAllButton";
+import Axios from "axios";
 
 function Portfolio() {
   const [front, setFront] = useState([]);
@@ -18,11 +20,17 @@ function Portfolio() {
   let backArr = [];
   let fullArr = [];
   useEffect(() => {
-    api.getStarred().then((data) => {
-      setFav(data.data);
-    });
+    axios
+      .get(
+        "https://api.github.com/users/Adambear1/starred?page=1&per_page=5&client_id=b457e75c9719bdfdfd76/starred=true&client_secret=35f3055f4b29a23732ce2a18a62dc8ce9077a267"
+      )
+      .then((data) => {
+        console.log(data.data);
+        setFav(data.data);
+      });
     api.getPortfolio().then((data) => {
       const _data = data.data;
+      console.log(_data);
       for (const name of _data) {
         if (name.type === "front") {
           frontArr.push(name);
@@ -45,10 +53,10 @@ function Portfolio() {
       <Navbar />
       <Header padding={70} title="Portfolio" id="portfolio" />
       <CardContainer>
-        <div class="uk-height-medium">
-          <div class="js-wrapper uk-background-muted uk-margin-auto">
+        <div className="uk-height-medium">
+          <div className="js-wrapper uk-background-muted uk-margin-auto">
             <div uk-overflow-auto="selContainer: .uk-height-medium; selContent: .js-wrapper">
-              <div class="uk-grid-large" uk-grid>
+              <div className="uk-grid-large" uk-grid>
                 <h1>⭐ Top Rated Applications ⭐</h1>
                 <div
                   className="uk-child-width-1-2@m uk-grid-match "
@@ -59,6 +67,7 @@ function Portfolio() {
                   {fav.map((item) => {
                     return (
                       <FavoritesCard
+                        key={item._id}
                         name={item.name}
                         url={item.url}
                         description={item.description}
@@ -87,13 +96,13 @@ function Portfolio() {
                   {front.map((item) => {
                     return (
                       <PortfolioCard
+                        key={item._id}
                         title={item.name}
                         about={item.description}
                         repoURL={item.githubCode}
                         siteURL={item.githubRepo}
                         lEx={item.learningExp}
                         imgURL={item.gif}
-                        key={item._id}
                       />
                     );
                   })}
@@ -118,13 +127,13 @@ function Portfolio() {
                   {back.map((item) => {
                     return (
                       <PortfolioCard
+                        key={item._id}
                         title={item.name}
                         about={item.description}
                         repoURL={item.githubCode}
                         siteURL={item.githubRepo}
                         lEx={item.learningExp}
                         imgURL={item.gif}
-                        key={item._id}
                       />
                     );
                   })}
@@ -149,13 +158,13 @@ function Portfolio() {
                   {full.map((item) => {
                     return (
                       <PortfolioCard
+                        key={item._id}
                         title={item.name}
                         about={item.description}
                         repoURL={item.githubCode}
                         siteURL={item.githubRepo}
                         lEx={item.learningExp}
                         imgURL={item.gif}
-                        key={item._id}
                       />
                     );
                   })}
