@@ -7,12 +7,6 @@ function PortfolioCard(props) {
   return (
     <>
       <div className="uk-card uk-card-default portfolio-card">
-        {/* <div id={props.repoURL} uk-modal>
-        <div class="uk-modal-dialog uk-modal-body">
-          <img src={props.gif} width="" height="" alt="" uk-img />
-          <button class="uk-modal-close" type="button"></button>
-        </div>
-      </div> */}
         <div className="uk-card-body portfolio-card-body">
           <div
             className="uk-position-relative uk-visible-toggle uk-light"
@@ -21,29 +15,9 @@ function PortfolioCard(props) {
           >
             <ul className="uk-slideshow-items">
               <li>
-                <h3 className="uk-card-title project-title">
-                  {props.title}
-
-                  {/* <button
-                  href={"#" + props.repoURL}
-                  type="button"
-                  class="color"
-                  uk-icon="tv"
-                  uk-toggle
-                /> */}
-                  <button
-                    class="uk-button uk-button-default uk-margin-small-right"
-                    type="button"
-                    uk-toggle="target: #modal-example"
-                  >
-                    Open
-                  </button>
-                </h3>
+                <h3 className="uk-card-title project-title">{props.title}</h3>
                 <p className="project-description">{props.about}</p>
               </li>
-              {props.lEx.map((item) => {
-                return <li title={item.learningExp}>{item.learningExp}</li>;
-              })}
             </ul>
           </div>
         </div>
@@ -66,31 +40,6 @@ function PortfolioCard(props) {
               </button>
             </a>
           </div>
-        </div>
-      </div>
-      <div id="modal-example" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body">
-          <h2 class="uk-modal-title">Headline</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="uk-text-right">
-            <button
-              class="uk-button uk-button-default uk-modal-close"
-              type="button"
-            >
-              Cancel
-            </button>
-            <button class="uk-button uk-button-primary" type="button">
-              Save
-            </button>
-          </p>
         </div>
       </div>
     </>
