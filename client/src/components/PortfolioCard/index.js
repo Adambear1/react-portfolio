@@ -22,13 +22,14 @@ function PortfolioCard(props) {
             <li>
               <h3 className="uk-card-title project-title">
                 {props.title}
-                <button
-                  href={"#" + props.repoURL}
-                  type="button"
-                  class="color"
-                  uk-icon="tv"
-                  uk-toggle
-                />
+                <a uk-toggle>
+                  <button
+                    href={"#" + props.repoURL}
+                    type="button"
+                    class="color"
+                    uk-icon="tv"
+                  />
+                </a>
               </h3>
               <p className="project-description">{props.about}</p>
             </li>
