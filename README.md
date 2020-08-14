@@ -10,9 +10,10 @@ Thanks for checking it out!
 
 <p float="left">
 <img src="./client/public/1.png" alt="Login Page Image" width="45%" style="margin: 10px;"/>
-<img src="./client/public/images/about.png" alt="Dashboard Image" width="45%" style="margin: 10px;"/><br>
-<img src="./client/public/images/portfolio.png" alt="Homepage Image" width="45%" style="margin: 10px;"/>
-<img src="./client/public/images/skills.png" alt="Spending Page Image" width="45%" style="margin: 5px;"/><br>
+<img src="./client/public/2.png" alt="Dashboard Image" width="45%" style="margin: 10px;"/><br>
+<img src="./client/public/3.png" alt="Homepage Image" width="45%" style="margin: 10px;"/>
+<img src="./client/public/5.png" alt="Spending Page Image" width="45%" style="margin: 5px;"/><br>
+<img src="./client/public/4.png" alt="Spending Page Image" width="100%" style="margin: 0px; align: center"/><br>
 
 ## Technologies
 
@@ -31,7 +32,7 @@ View deployed site [here](http://adambirgenheier.com). <br>
 
 ##### You can also view an alternative version of the website [here](https://adambirgenheier.herokuapp.com/). <br>
 
-![](public/images/react-portfolio.gif)
+![](./client/public/portfolio.gif)
 
 ## Contact Me
 
