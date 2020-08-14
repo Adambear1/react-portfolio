@@ -18,16 +18,7 @@ function PortfolioCard(props) {
                 <h3 className="uk-card-title project-title">{props.title}</h3>
                 <p className="project-description">{props.about}</p>
               </li>
-              <li>
-                <img src={props.gif} alt="" uk-cover="true" />
-              </li>
             </ul>
-            <a
-              className="uk-position-top-right uk-position-small uk-hidden-hover"
-              href="#"
-              uk-slidenav-next="true"
-              uk-slideshow-item="next"
-            ></a>
           </div>
         </div>
         <div className="uk-card-footer portfolio-card-footer">
