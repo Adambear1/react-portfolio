@@ -1,4 +1,4 @@
-# [React Portfolio](http://jpreston-alt.github.io/react-portfolio)
+# [React Portfolio](http://adambear1.github.io/react-portfolio)
 
 ## Description
 
