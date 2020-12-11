@@ -10,26 +10,20 @@ function AboutSection() {
           <div id="about-me">
             <Header title="About Me" />
             <p className="uk-text-justify about-me-desc">
-              Hi! I'm Adam, I'm a full-stack web developer and software engineer
-              with a passion for databases and algorithms. After graduating from
-              the University of Washington I worked two years at a grass-roots
-              organization in Tacoma creating projection models, databases, and
-              helping facilitate the remodeling and construction of residential
-              properties. My career as a real estate investor has been teaching
-              the importance databases and numbers, as well as the importance of
-              loyalty and communication. To thrive in such an industry, personal
-              connections and precision mean everything; I look to continue such
-              routes in the world of web development.
+              Hi, I'm Adam! I'm a full-stack developer with a experience in
+              Javascript, Node, Python, Elixir, and Google and Amazon Web
+              Services.
               <br />
               <br />
-              As I have just finished a Full-Stack Web Development Certification
-              course at the University of Washington, I have had the opportunity
-              to roll into the Python Certification course, where I look to
-              further hone my software development skills while continuing my
-              daily life.
+              I have been a full-stack developer for a year now, and have
+              developed, hosted, and maintained over 15 professional projects
+              from companies all throughout Washington State. I strive to be the
+              best web developer I can, and am up to any task.
               <br />
-              <br />I am always open to additional work and opportunities. For
-              any inquiries, please feel free to reach out!
+              <br />
+              For my free time, I love renovating and developing housing and
+              condominiums, reading, hiking, and exploring. I am proficient in
+              Spanish and Japanese, and love trying new things!
             </p>
             {/* <img src={profilePic} alt="Me" style={{ width: 175 }} /> */}
           </div>
