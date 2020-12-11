@@ -23,7 +23,6 @@ app.use(express.json());
 
 // app.use(require("./routes/api.js"));
 
-require("dotenv").config();
 var MongoClient = require("mongodb").MongoClient;
 var url = process.env.MONGODB_URI || process.env.URI;
 
