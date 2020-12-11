@@ -10,9 +10,10 @@ const compression = require("compression");
 const PORT = process.env.PORT || 4000;
 const app = express();
 
-// Send every request to the React app
-// Define any API routes before this runs
-//
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 app.use(helmet());
 app.use(logger("dev"));
 
@@ -77,9 +78,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "./client/index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
