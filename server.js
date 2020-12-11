@@ -10,12 +10,6 @@ const compression = require("compression");
 const PORT = process.env.PORT || 4000;
 const app = express();
 
-// Dev
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "./client/build")));
-}
-
 // Send every request to the React app
 // Define any API routes before this runs
 //
@@ -74,10 +68,13 @@ app.get("/api/starred", (req, res) => {
     });
 });
 
-app.get("*", function (req, res) {
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/index.html"));
 });
-
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
