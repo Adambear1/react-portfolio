@@ -7,7 +7,7 @@ const axios = require("axios");
 const cors = require("cors");
 const compression = require("compression");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 
 // Dev
