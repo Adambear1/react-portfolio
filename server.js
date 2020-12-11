@@ -68,6 +68,12 @@ app.get("/api/starred", (req, res) => {
     });
 });
 
+// Heroku
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "./client/build")));
+// }
+
+// GCloud
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
