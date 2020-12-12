@@ -45,40 +45,42 @@ polyline {
   border: none;
 }
 
-.color {
-  color: gray !important;
-  margin-left: 10px;
-}
-
 @media only screen and (max-width: 374px) {
   .portfolio-card-body {
-    padding: 15px;
+      padding: 15px;
   }
 
   .project-title {
-    padding-top: 0px;
-    margin-bottom: 0px;
+      padding-top: 0px;
+      margin-bottom: 0px;
   }
-}
+} 
+
+@media only screen and (max-width: 420px) {
+  .project-description {
+      font-size: 10px;
+  }
+} 
 
 @media only screen and (min-width: 375px) {
   .portfolio-btn {
-    margin-left: 12px;
-    margin-right: 12px;
-    padding: 0px 18px 0px 18px;
-    font-size: 12px;
+      margin-left: 12px;
+      margin-right: 12px;
+      padding: 0px 18px 0px 18px;
+      font-size: 12px;
   }
 }
 
 @media only screen and (min-width: 460px) {
+
   .portfolio-btn {
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 0px 24px 0px 24px;
-    font-size: 14px;
+      margin-left: 5%;
+      margin-right: 5%;
+      padding: 0px 24px 0px 24px;
+      font-size: 14px;
   }
 
   .project-title {
-    margin-bottom: 15px;
+      margin-bottom: 15px;
   }
 }

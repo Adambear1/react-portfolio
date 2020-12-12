@@ -5,26 +5,30 @@
   background-color: rgba(245, 245, 245, 0.8);
 }
 
+#about-me-container {
+  margin-bottom: 100px;
+  padding-top: 30px;
+  margin-top: 70px;
+  margin-bottom: 70px !important;
+
+}
+
 p {
   color: rgba(0, 0, 0, 0.9);
   text-shadow: 0.35px 0.35px black;
-}
 
-#about-me-container {
-  /* margin-top: 520px; */
-  margin-bottom: 75px;
-  padding-top: 10px;
-}
-
-.about-container {
-  height: 78vh;
 }
 
 @media only screen and (min-width: 769px) {
   #about-me-container {
-    /* margin-top: 450px; */
+
     padding-top: 20px;
-    width: 65%;
-    padding-left: 35%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto
+    /* padding-left: 35%; */
   }
 }
+
+
+

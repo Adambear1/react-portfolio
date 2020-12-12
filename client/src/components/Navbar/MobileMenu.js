@@ -14,7 +14,12 @@ function MobileMenu() {
         ></button>
         <ul className="uk-list">
           <li>
-            <a href="#endregionabout" className="nav-item mobile-nav-item">
+            <a href="/" className="nav-item mobile-nav-item">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="nav-item mobile-nav-item">
               About
             </a>
           </li>

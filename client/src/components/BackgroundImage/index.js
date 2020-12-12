@@ -5,7 +5,7 @@ function BackgroundImage(props) {
   return (
     <div
       className="pic-section"
-      uk-parallax="bgy: -200"
+      // uk-parallax="bgy: -200"
       style={{ backgroundImage: `url(${props.image})` }}
     >
       {props.children}

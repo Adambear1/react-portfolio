@@ -52,17 +52,17 @@ function ContactCanvas() {
           </li>
           <li>
             <a
-              uk-icon="icon: facebook"
-              href="https:https://www.facebook.com/Adam-Birgenheier-Creates-109341394185856/"
+              uk-icon="icon: world"
+              href="http://www.quality-creations.com"
               className="contact-icon contact-link-icon"
               target="_blank"
             ></a>
             <a
               className="contact-link contact-li uk-text-middle"
-              href="https://www.facebook.com/Adam-Birgenheier-Creates-109341394185856/"
+              href="http://www.quality-creations.com/"
               target="_blank"
             >
-              Adam Creates
+              Quality-Creations
             </a>
           </li>
           <li>

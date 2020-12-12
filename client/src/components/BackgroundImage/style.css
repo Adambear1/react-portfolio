@@ -2,6 +2,7 @@
   background-position: center;
   /* background-size: cover; */
   background-repeat: no-repeat;
+  /* position: absolute; */
   animation: fadeIn;
   animation-duration: 3s;
   background-size: 100% 100%;

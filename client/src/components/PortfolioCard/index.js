@@ -15,15 +15,20 @@ function PortfolioCard(props) {
           >
             <ul className="uk-slideshow-items">
               <li>
-                <h3 className="uk-card-title project-title">{props.title}</h3>
-                <p className="project-description">{props.about}</p>
+                <h3 className="uk-card-title project-title">{props.name}</h3>
+                <p className="project-description">{props.description}</p>
               </li>
+              {/* <li>
+                {props.learningExp.forEach((item) => {
+                  return <p>{item}</p>;
+                })}
+              </li> */}
             </ul>
           </div>
         </div>
         <div className="uk-card-footer portfolio-card-footer">
           <div className="uk-text-center">
-            <a href={props.siteURL} target="_blank" className="btn-link">
+            <a href={props.site} target="_blank" className="btn-link">
               <button
                 className="uk-button uk-button-default portfolio-btn"
                 uk-icon="world"
@@ -31,10 +36,12 @@ function PortfolioCard(props) {
                 View Website
               </button>
             </a>
-            <a href={props.repoURL} target="_blank" className="btn-link">
+            <a href="#" target="_blank" className="btn-link">
               <button
                 className="uk-button uk-button-default portfolio-btn"
                 uk-icon="github"
+                disabled="true"
+                style={{ cursor: "not-allowed" }}
               >
                 GitHub Repo
               </button>
