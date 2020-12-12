@@ -35,18 +35,6 @@ module.exports.portfolio = [
     ],
   },
   {
-    name: "Ronald Landscaping",
-    description:
-      "Front end application developed to advertise and promote the work of a local landscaping company.",
-    site: "https://adam-maryelle-photography.herokuapp.com/",
-    learningExp: [
-      "UI/UX effects",
-      "Privatized Routes",
-      "Redux concepts",
-      "Sockets",
-    ],
-  },
-  {
     name: "illuno",
     description:
       "Full Stack multimillion dollar software I was a part in revamping to modernize in a small group of developers. Focused specifically on integrating and securing to Google Cloud Platform (GCP), with UI/UX effects.",
