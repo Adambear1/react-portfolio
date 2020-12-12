@@ -156,6 +156,11 @@ module.exports.skills = [
     url: "https://slack.com/",
   },
   {
+    type: "resource",
+    name: "Jira",
+    url: "https://jira.com/",
+  },
+  {
     type: "devops",
     name: "Digital Ocean",
     url: "https://www.digitalocean.com/",
