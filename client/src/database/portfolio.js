@@ -26,7 +26,7 @@ module.exports.portfolio = [
     name: "Maryelle Photography",
     description:
       "Front end application developed to promote the work of a local photography company.",
-    site: "https://adam-maryelle-photography.herokuapp.com/",
+    site: "https://maryellephotogra-1597995640635.wm.r.appspot.com/#/",
     learningExp: [
       "UI/UX effects",
       "Privatized Routes",
