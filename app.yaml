@@ -13,5 +13,5 @@ handlers:
     upload: build/.*\.(json|ico|js)$
 
   - url: .*
-    static_files: build/index.html
-    upload: build/index.html
+    static_files: client/build/index.html
+    upload: client/build/index.html
