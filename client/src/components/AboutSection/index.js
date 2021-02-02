@@ -12,22 +12,22 @@ function AboutSection() {
             <Header title="About Me" />
             <p className="uk-text-justify about-me-desc">
               Hi, I'm Adam! I'm a full-stack developer experienced in
-              Javascript, Node, Python, and Elixir.
+              Javascript (React & Node), Python, and Elixir.
               <br />
               <br />
-              My professional experience includes integrating and developing
-              multimillion dollar software, as well as teaching and tutoring
-              students at the University of Washignton. I love creating new
+              My professional experience includes writing, integrating, and maintaining code for various tech startups, consulting interantional ecommerce stores on modern React/Redux methods, as well as teaching and tutoring
+              students at the University of Washignton. 
+              I love creating new
               software that serves a purpose. A few projects I have created are
               a real estate market analyzing tool, Yelp and Zillow prototypes,
-              as well as professional sites for local organizations.
+              as well as various professional sites for local organizations.
               <br />
               <br />
-              For my free time, I love flipping houses and condominiums, as well
+              For my free time, I love remodeling houses, as well
               as reading, hiking, and exploring. I am proficient in Spanish and
               Japanese, and love trying new things and meeting new people!
             </p>
-            <p>{/* <AboutImage /> */}</p>
+            <p><AboutImage /></p>
           </div>
         </div>
       </div>
