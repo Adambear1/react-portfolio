@@ -4,11 +4,32 @@ import React, { useState } from "react";
 import PortfolioViewMoreModal from "../PortfolioViewMoreModal.js";
 import "./style.css";
 
-function PortfolioCard({ name, description, site }) {
+function PortfolioCard({
+  name,
+  description,
+  learningExp,
+  site,
+  timeSpent,
+  giph,
+  futureAdditions,
+  technologiesUsed,
+}) {
   const [open, setOpen] = useState(false);
   return (
     <div>
-      {open && <PortfolioViewMoreModal open={open} setOpen={setOpen} />}
+      {open && (
+        <PortfolioViewMoreModal
+          open={open}
+          setOpen={setOpen}
+          learningExp={learningExp}
+          timeSpent={timeSpent}
+          giph={giph}
+          name={name}
+          site={site}
+          futureAdditions={futureAdditions}
+          technologiesUsed={technologiesUsed}
+        />
+      )}
       <div className="uk-card uk-card-default portfolio-card">
         <div className="uk-card-body portfolio-card-body">
           <div
@@ -45,6 +66,7 @@ function PortfolioCard({ name, description, site }) {
               className="btn-link"
             >
               <button
+                onClick={() => setOpen(true)}
                 className="uk-button uk-button-default portfolio-btn"
                 uk-icon="icon: more-vertical"
               >

@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import PortfolioCard from "../components/PortfolioCard";
 import ViewAllButton from "../components/ViewAllButton";
 import { portfolio } from "../database/portfolio";
-import PortfolioViewMoreModal from "../components/PortfolioViewMoreModal.js";
 
 function Portfolio() {
-  const [open, setOpen] = useState(false);
   return (
     <>
       <Navbar />
@@ -20,17 +17,35 @@ function Portfolio() {
           id="portfolio-section"
           uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 250; repeat: false"
         >
-          {portfolio.map((el, index) => {
-            return (
-              <PortfolioCard
-                key={index}
-                name={el.name}
-                description={el.description}
-                site={el.site}
-                learningExp={el.learningExp}
-              />
-            );
-          })}
+          {portfolio.map(
+            (
+              {
+                name,
+                description,
+                site,
+                learningExp,
+                timeSpent,
+                giph,
+                futureAdditions,
+                technologiesUsed,
+              },
+              index
+            ) => {
+              return (
+                <PortfolioCard
+                  futureAdditions={futureAdditions}
+                  technologiesUsed={technologiesUsed}
+                  timeSpent={timeSpent}
+                  giph={giph}
+                  key={index}
+                  name={name}
+                  description={description}
+                  site={site}
+                  learningExp={learningExp}
+                />
+              );
+            }
+          )}
         </div>
       </div>
       <div className="uk-margin-top">

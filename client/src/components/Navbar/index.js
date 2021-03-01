@@ -9,7 +9,7 @@ const style = {
   },
 };
 
-function Navbar(props) {
+function Navbar({ color }) {
   return (
     <div>
       <nav
@@ -19,16 +19,12 @@ function Navbar(props) {
         <div className="uk-navbar-right">
           <ul className="uk-navbar-nav uk-visible@m">
             <li>
-              <Link to="/" className="nav-item" style={{ color: props.color }}>
+              <Link to="/" className="nav-item" style={{ color: color }}>
                 Home
               </Link>
             </li>
             <li>
-              <Link
-                to="/about"
-                className="nav-item"
-                style={{ color: props.color }}
-              >
+              <Link to="/about" className="nav-item" style={{ color: color }}>
                 About
               </Link>
             </li>
@@ -36,18 +32,28 @@ function Navbar(props) {
               <Link
                 to="/portfolio"
                 className="nav-item"
-                style={{ color: props.color }}
+                style={{ color: color }}
               >
                 Portfolio
               </Link>
             </li>
             <li>
-              <Link
-                to="/skills"
-                className="nav-item"
-                style={{ color: props.color }}
-              >
+              <Link to="/skills" className="nav-item" style={{ color: color }}>
                 Skills
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/videos"
+                className="nav-item"
+                style={{
+                  color: color,
+                  cursor: "not-allowed",
+                  pointerEvents: "none",
+                }}
+                title="Coming soon!"
+              >
+                Videos
               </Link>
             </li>
             <li>
@@ -59,7 +65,7 @@ function Navbar(props) {
               <a
                 uk-toggle="target: #contact-canvas"
                 className="nav-item"
-                style={{ color: props.color }}
+                style={{ color: color }}
               >
                 Contact
               </a>

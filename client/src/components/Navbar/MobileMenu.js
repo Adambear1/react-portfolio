@@ -35,6 +35,16 @@ function MobileMenu() {
           </li>
           <li>
             <a
+              href="#videos"
+              className="nav-item mobile-nav-item"
+              style={{ cursor: "not-allowed", pointerEvents: "none" }}
+              title="Coming Soon!"
+            >
+              Videos
+            </a>
+          </li>
+          <li>
+            <a
               uk-toggle="target: #resume-modal"
               className="nav-item mobile-nav-item"
             >

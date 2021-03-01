@@ -1,4 +1,12 @@
-module.exports.portfolio = [
+import personalCollection from "../assets/giphs/modalRouter.gif";
+import wwwoa from "../assets/giphs/wwwoa.gif";
+import localStorage from "../assets/giphs/localStorage.gif";
+import illuno from "../assets/giphs/illuno.png";
+import pythonServer from "../assets/giphs/pythonServer.gif";
+import rhux from "../assets/giphs/rhux.gif";
+import qualityCreations from "../assets/giphs/qualityCreations.gif";
+
+export const portfolio = [
   {
     name: "Personal Collection",
     description:
@@ -12,7 +20,23 @@ module.exports.portfolio = [
       "Scalable Node Base",
     ],
     timeSpent: "10 days",
-    // giph:
+    giph: personalCollection,
+    futureAdditions: [
+      "Expand Category Availability",
+      "Paginate Cart/Collection",
+      "Search FUnctionality",
+      "Dynamic Lookup by Key Words",
+      "Google Analytics Integration",
+    ],
+    technologiesUsed: [
+      "Node",
+      "React",
+      "Bootstrap",
+      "Local Storage",
+      "OOP/Classes",
+      "Offline Trackers",
+      "Redux",
+    ],
   },
   {
     name: "illuno",
@@ -25,8 +49,18 @@ module.exports.portfolio = [
       "Kubernetes/Docker",
       "Elixir & Python Server",
       "Server Side Rendering",
+      "Redux",
     ],
     timeSpent: "3 months",
+    giph: illuno,
+    technologiesUsed: [
+      "Firebase",
+      "Node",
+      "Javascript",
+      "Elixir",
+      "Python",
+      "MySQL",
+    ],
   },
   {
     name: "Western Washington Wrestling Officials Association",
@@ -39,8 +73,11 @@ module.exports.portfolio = [
       "Redux concepts",
       "Sockets",
       "Dynamic MongoDB Routing",
+      "Redux",
     ],
     timeSpent: "2 months",
+    giph: wwwoa,
+    technologiesUsed: ["MongoDB", "Node", "React", "CSS", "Bootstrap"],
   },
   {
     name: "Python SPA Server",
@@ -56,6 +93,13 @@ module.exports.portfolio = [
       "Factory, Inheritance, & Proxy Models",
     ],
     timeSpent: "10 days",
+    giph: pythonServer,
+    futureAdditions: [
+      "Dynamic CSS/Bootstrap",
+      "Legitimize Single Page Functionality (One HTML page rerendering components added)",
+      "Toggle Usage for Front End Library",
+    ],
+    technologiesUsed: ["Python", "OOP/Classes", "Python Server"],
   },
   {
     name: "Quality-Creations",
@@ -70,6 +114,8 @@ module.exports.portfolio = [
       "Node Server Stability",
     ],
     timeSpent: "21 days",
+    giph: qualityCreations,
+    technologiesUsed: ["Node", "React", "CSS", "Materialize"],
   },
   {
     name: "RHUX Analytics",
@@ -77,5 +123,32 @@ module.exports.portfolio = [
     site: "http://RHUXAnalytics.com/",
     learningExp: ["UI/UX Effects", "Google Tag Manager", "Google Web Vitals"],
     timeSpent: "3 months",
+    giph: rhux,
+    technologiesUsed: [
+      "Wordpress",
+      "Google Tag Manager",
+      "Google Analytics",
+      "Federated Components",
+    ],
+  },
+  {
+    name: "Dynamic Full Stack Local Storage",
+    description:
+      "Full Stack Node application utilize vanilla JS, no libraries, to store all data both in the browser and on the server. Built with custom classes & utilizes OOP for practical usage and scalability",
+    site: "http://github.com/Adambear1/localStorage",
+    learningExp: [
+      "Authentic Node",
+      "Local Storage & JSON Manipulation",
+      "Custom Logger",
+      "Class Based",
+      "Proxy Routes",
+    ],
+    timeSpent: "2 days",
+    giph: localStorage,
+    futureAdditions: [
+      "Turn to Organic Node (No CORS or Express Library)",
+      "Create Custom Search Bar",
+    ],
+    technologiesUsed: ["HTML", "Node", "OOP", "JSON", "Local Storage"],
   },
 ];
