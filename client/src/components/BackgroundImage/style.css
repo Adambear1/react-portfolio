@@ -1,16 +1,21 @@
 .pic-section {
   background-position: center;
+  background-image: url("../../assets/images/home.jpg") !important;
   /* background-size: cover; */
   background-repeat: no-repeat;
   /* position: absolute; */
   animation: fadeIn;
   animation-duration: 3s;
   background-size: 100% 100%;
-  height: 100vh;
+  /* height: 100vh; */
 }
-
+/* 
 @media screen and (max-width: 700px){
   .pic-section{
     height: 140vh
+  } */
+@media screen and (max-width: 700px){
+  .pic-section{
+    background-image: url("../../assets/images/home-small.jpg") !important;
   }
 }

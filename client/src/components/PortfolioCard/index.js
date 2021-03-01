@@ -1,11 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import PortfolioViewMoreModal from "../PortfolioViewMoreModal.js";
 import "./style.css";
 
-function PortfolioCard(props) {
+function PortfolioCard({ name, description, site }) {
+  const [open, setOpen] = useState(false);
   return (
     <div>
+      {open && <PortfolioViewMoreModal open={open} setOpen={setOpen} />}
       <div className="uk-card uk-card-default portfolio-card">
         <div className="uk-card-body portfolio-card-body">
           <div
@@ -15,35 +18,37 @@ function PortfolioCard(props) {
           >
             <ul className="uk-slideshow-items">
               <li>
-                <h3 className="uk-card-title project-title">{props.name}</h3>
-                <p className="project-description">{props.description}</p>
+                <h3 className="uk-card-title project-title">{name}</h3>
+                <p className="project-description">{description}</p>
               </li>
-              {/* <li>
-                {props.learningExp.forEach((item) => {
-                  return <p>{item}</p>;
-                })}
-              </li> */}
             </ul>
           </div>
         </div>
         <div className="uk-card-footer portfolio-card-footer">
           <div className="uk-text-center">
-            <a href={props.site} target="_blank" className="btn-link">
+            <a
+              href={site}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-link"
+            >
               <button
                 className="uk-button uk-button-default portfolio-btn"
-                uk-icon="world"
+                uk-icon="icon: world"
               >
-                View Website
+                View Application
               </button>
             </a>
-            <a href="#" target="_blank" className="btn-link">
+            <a
+              onClick={() => setOpen(true)}
+              target="_blank"
+              className="btn-link"
+            >
               <button
                 className="uk-button uk-button-default portfolio-btn"
-                uk-icon="github"
-                disabled="true"
-                style={{ cursor: "not-allowed" }}
+                uk-icon="icon: more-vertical"
               >
-                GitHub Repo
+                View More
               </button>
             </a>
           </div>

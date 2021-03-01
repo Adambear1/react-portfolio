@@ -13,7 +13,14 @@ function SkillsCard(props) {
             {props.skills.map((item) => {
               return (
                 <li title={item.name}>
-                  <a href={item.url}>{item.name}</a>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    title={item.name}
+                  >
+                    {item.name}
+                  </a>
                 </li>
               );
             })}

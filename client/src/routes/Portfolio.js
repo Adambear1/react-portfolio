@@ -3,18 +3,16 @@ import axios from "axios";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import PortfolioCard from "../components/PortfolioCard";
-import CardContainer from "../components/CardContainer";
-import api from "../utils/api";
-import FavoritesCard from "../components/FavoritesCard";
 import ViewAllButton from "../components/ViewAllButton";
 import { portfolio } from "../database/portfolio";
+import PortfolioViewMoreModal from "../components/PortfolioViewMoreModal.js";
 
 function Portfolio() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <Navbar />
       <Header padding={70} title="Portfolio" id="portfolio" />
-
       <div className="uk-container">
         <div
           className="uk-child-width-1-2@m uk-grid-match"

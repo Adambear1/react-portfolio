@@ -106,8 +106,8 @@ module.exports.skills = [
   },
   {
     type: "libraries",
-    name: "TensorFlow",
-    url: "https://www.tensorflow.org/",
+    name: "Beautiful Soup",
+    url: "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
   },
   {
     type: "libraries",

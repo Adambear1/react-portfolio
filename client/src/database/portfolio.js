@@ -1,8 +1,23 @@
 module.exports.portfolio = [
   {
+    name: "Personal Collection",
+    description:
+      "Full Stack MERN Application utilizing Redux, Classes, and Design Patterns for scalability. Designed to emulate Shopify design to later add GTM/GA functionality if needed.",
+    site: "https://github.com/Adambear1/modalrouter",
+    learningExp: [
+      "React/Redux",
+      "MERN",
+      "Offline/Online Capabilities",
+      "Custom Classes",
+      "Scalable Node Base",
+    ],
+    timeSpent: "10 days",
+    // giph:
+  },
+  {
     name: "illuno",
     description:
-      "Full Stack multimillion dollar software I was a part in revamping to modernize in a small group of developers. Focused specifically on integrating and securing to Google Cloud Platform (GCP), with UI/UX effects.",
+      "Member of revamping Full Stack staffing software. Focused specifically on integrating and securing to Google Cloud Platform (GCP), with UI/UX effects.",
     site: "http://illuno.io/",
     learningExp: [
       "OOP",
@@ -11,56 +26,56 @@ module.exports.portfolio = [
       "Elixir & Python Server",
       "Server Side Rendering",
     ],
-  },
-  {
-    name: "RHUX Analytics",
-    description:
-      "Adding design, and impliment Google Web Vitals tracking.",
-      site: "http://RHUXAnalytics.com/",
-      learningExp: ["UI/UX Effects", "Google Tag Manager", "Google Web Vitals"],
+    timeSpent: "3 months",
   },
   {
     name: "Western Washington Wrestling Officials Association",
     description:
-      "Full Stack application created for local Washington Wrestling Association for member login,saving/archiving notes, and private/secured routes.",
+      "Full Stack MERN application created for local Washington Wrestling Association for member login,saving/archiving notes, and private/secured routes.",
     site: "http://wwwoa.org/",
     learningExp: [
       "UI/UX effects",
       "Privatized Routes",
       "Redux concepts",
       "Sockets",
+      "Dynamic MongoDB Routing",
     ],
+    timeSpent: "2 months",
+  },
+  {
+    name: "Python SPA Server",
+    description:
+      "Full Stack Single Page (SPA) Python Application with custom rendering, HTML manipulation, and local database interactions.",
+    site: "https://github.com/Adambear1/pythonServer",
+    learningExp: [
+      "Python Server",
+      "OOP/Classes",
+      "HTML Rendering",
+      "CRUD JSON Data",
+      "Lambda & Deconstruction Methods",
+      "Factory, Inheritance, & Proxy Models",
+    ],
+    timeSpent: "10 days",
   },
   {
     name: "Quality-Creations",
     description:
-      "Personalized professional website for all clients to visit to inquire for production. ***Site is Temporarily Down***",
+      "Personalized professional website for all clients to visit to inquire for production.",
     site: "http://quality-creations.com/",
-    learningExp: ["UI-Kit", "UI/UX Effects", "Videos and basic animations."],
-  },
-
-  {
-    name: "Maryelle Photography",
-    description:
-      "Front end application developed to promote the work of a local photography company. ***Site is Temporarily Down***",
-    site: "https://maryellephotogra-1597995640635.wm.r.appspot.com/#/",
     learningExp: [
-      "UI/UX effects",
-      "Privatized Routes",
-      "Redux concepts",
-      "Sockets",
+      "UI-Kit",
+      "UI/UX Effects",
+      "Videos and Basic Animations",
+      "GCP",
+      "Node Server Stability",
     ],
+    timeSpent: "21 days",
   },
   {
-    name: "Mollys Hops",
-    description:
-      "Full Stack application for local hops business with ability for visiters to subscribe + schedule order pickup via Google Calendar API. Backend custom built with use of nodemailer for owner notifications. **Site is temporarily down***",
-    site: "https://adam-mollys-hops.herokuapp.com/",
-    learningExp: [
-      "Google Calendar API",
-      "Scheduling/Email Notification System",
-      "Video Slide Show With Effects",
-    ],
+    name: "RHUX Analytics",
+    description: "Adding design, and implemented Google Web Vitals tracking.",
+    site: "http://RHUXAnalytics.com/",
+    learningExp: ["UI/UX Effects", "Google Tag Manager", "Google Web Vitals"],
+    timeSpent: "3 months",
   },
-  
 ];
