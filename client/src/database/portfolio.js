@@ -1,10 +1,10 @@
-import personalCollection from "../assets/giphs/modalRouter.gif";
-import wwwoa from "../assets/giphs/wwwoa.gif";
-import localStorage from "../assets/giphs/localStorage.gif";
-import illuno from "../assets/giphs/illuno.png";
-import pythonServer from "../assets/giphs/pythonServer.gif";
-import rhux from "../assets/giphs/rhux.gif";
-import qualityCreations from "../assets/giphs/qualityCreations.gif";
+import personalCollection from "../assets/images/modalRouter.gif";
+import wwwoa from "../assets/images/wwwoa-min.gif";
+import localStorage from "../assets/images/localStorage.gif";
+import illuno from "../assets/images/illuno.png";
+import pythonServer from "../assets/images/pythonServer.gif";
+import rhux from "../assets/images/rhux-min.gif";
+import qualityCreations from "../assets/images/qualityCreations-min.gif";
 
 export const portfolio = [
   {
