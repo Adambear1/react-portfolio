@@ -50,7 +50,7 @@ function ContactCanvas() {
               Adambear1
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               uk-icon="icon: world"
               href="http://www.quality-creations.com"
@@ -64,7 +64,7 @@ function ContactCanvas() {
             >
               Quality-Creations
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               uk-icon="icon: linkedin"
